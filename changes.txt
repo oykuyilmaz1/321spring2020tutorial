@@ -1,0 +1,16 @@
+In this commit what we did was to create a django project and app. 
+We started by creating a virtual environment:
+python -m venv env
+If it is not activated, (you can check it out by looking at the left of the command line, it should be written the 
+name of your environment in paranthesis, e.g. (env)), you can activate by running this command. 
+env\Scripts\activate
+This tutorial is for windows.
+For Mac and Linux commands please check https://code.visualstudio.com/docs/python/tutorial-django
+We install django framework to the environment.
+pip install django
+We start the project
+django-admin startproject tutorial_project .
+This command is used to start the server. Run this in the folder where your manage.py file is in
+python manage.py runserver
+We start an app called tutorial_app. You can name the project and the app anything you want.
+python manage.py startapp tutorial_app
