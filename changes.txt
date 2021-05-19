@@ -17,3 +17,6 @@ python manage.py startapp tutorial_app
 
 Step2:
 Here we add out app to installed apps. Then, we create our initial page. 
+
+Step3:
+Here, we add two more urls and get query strings(parameters in url).
