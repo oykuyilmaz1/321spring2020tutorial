@@ -15,10 +15,12 @@ def returnMysteryActionShows(user):
         shows.append({"name": "Vikings" , "score": "7"})
         shows.append({"name": "iZombie" , "score": "8"})
         shows.append({"name": "Teen Wolf" , "score": "6"})
+        return shows
     elif(user == "selen"):
         shows.append({"name": "Person Of Interest" , "score": "7"})
         shows.append({"name": "Breaking Bad" , "score": "9"})
         shows.append({"name": "Prison Break" , "score": "9"})
+        return shows
     else:
         return False
 
@@ -38,6 +40,8 @@ def returnDramaDistopianShows(user):
         shows.append({"name": "3%" , "score": "7"})
         shows.append({"name": "Merlin" , "score": "7"})
         shows.append({"name": "Daredevil" , "score": "9"})
+        return shows
+
     elif(user == "selen"):
         return shows
     else:
@@ -52,5 +56,6 @@ def returnComedyShows(user):
         shows.append({"name": "The Office" , "score": "9"})
         shows.append({"name": "Brooklyn 9 9" , "score": "7"})
         shows.append({"name": "HIMYM" , "score": "9"})
+        return shows
     else:
         return False 

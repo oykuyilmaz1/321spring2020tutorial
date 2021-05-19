@@ -27,3 +27,6 @@ We create our html files, and connect our views to those files.
 Step 5:
 command to install crispy forms:
 pip install django-crispy-forms 
+
+Step 6:
+List the tv shows
