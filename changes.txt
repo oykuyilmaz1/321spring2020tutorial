@@ -14,3 +14,6 @@ This command is used to start the server. Run this in the folder where your mana
 python manage.py runserver
 We start an app called tutorial_app. You can name the project and the app anything you want.
 python manage.py startapp tutorial_app
+
+Step2:
+Here we add out app to installed apps. Then, we create our initial page. 
