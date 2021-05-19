@@ -4,11 +4,16 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("view.index function is called")
+    index_text = "view.index is called"
+    context = {'index_text': index_text}
+    return render(request, 'renders/index.html', context)
 
 def printNumber(request, number):
-    t = number + 5
-    return HttpResponse(f'view.printNumber function is called with number given: {number}, and 5 more of it is: {t}')
+    numbers = [i for i in range(number, number+5)]
+    arr = []
+    for i in range(len(numbers)):
+        arr.append({"index":i, "number":numbers[i]})
+    return render(request, 'renders/numbers.html', {"arr":arr})
 
 def printString(request, string):
     t = string + "321"
