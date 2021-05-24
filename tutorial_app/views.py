@@ -64,6 +64,8 @@ def listShows(request, genre):
     elif(genre == 2): #comedy
         shows = returnComedyShows(name)
         genreTitle = "Comedy"
+    elif genre == 3:
+        shows = returnPopularShows()
     else:
         return redirect('../home')
     if(len(shows) == 0):

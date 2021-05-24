@@ -30,3 +30,6 @@ pip install django-crispy-forms
 
 Step 6:
 List the tv shows
+
+Step 7:
+pip install mysqlclient

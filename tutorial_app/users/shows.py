@@ -1,3 +1,4 @@
+from django.db import connection
 def returnMysteryActionShows(user):
     shows = []
     if(user == "oyku"):
@@ -43,6 +44,10 @@ def returnDramaDistopianShows(user):
         return shows
 
     elif(user == "selen"):
+        shows.append({"name": "Altered Carbon" , "score": "6"})
+        shows.append({"name": "Yaprak Dokumu" , "score": "9"})
+        shows.append({"name": "Peaky Blinders" , "score": "8"})
+        shows.append({"name": "Suits" , "score": "9"})
         return shows
     else:
         return False
@@ -53,9 +58,24 @@ def returnComedyShows(user):
         return shows
     elif(user == "selen"):
         shows.append({"name": "Friends" , "score": "9"})
-        shows.append({"name": "The Office" , "score": "9"})
-        shows.append({"name": "Brooklyn 9 9" , "score": "7"})
+        shows.append({"name": "Modern Family" , "score": "8"})
+        shows.append({"name": "Scrubs" , "score": "8"})
+        shows.append({"name": "The Office" , "score": "10"})
+        shows.append({"name": "Brooklyn 9 9" , "score": "8"})
         shows.append({"name": "HIMYM" , "score": "9"})
+        shows.append({"name": "Arrested Development" , "score": "7"})
+        shows.append({"name": "Community" , "score": "9"})
         return shows
     else:
         return False 
+
+def returnPopularShows():
+    stmt = "SELECT name,score FROM shows WHERE score > 7;"
+    cursor = connection.cursor()
+    cursor.execute(stmt)
+    tmp = cursor.fetchall()
+    shows = []
+    for s in tmp:
+        x = {"name":s[0], "score":s[1]}
+        shows.append(x)    
+    return shows
